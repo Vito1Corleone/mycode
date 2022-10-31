@@ -16,7 +16,7 @@ int main()//判断100到200之间有多少个素数
 		{
 			if (i%j == 0)
 			{
-				break;
+				break;//out for
 			}
 		}
 		if (j == i)
