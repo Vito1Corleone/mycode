@@ -1,0 +1,62 @@
+
+#include<stdio.h>
+#include<math.h>
+
+int main()//判断100到200之间有多少个素数
+{
+	int i = 0;
+	int count = 0;
+	//sqrt - 开平方的库函数
+	for (i = 100; i <= 200; i++)
+	{
+		//判断i是否是素数
+		//素数的判断规则，只能被1和本身整除的数
+		//试除法
+		//产生i到i-1试着去除自己本身
+		int j = 0;
+		for (j = 2; j < sqrt(i); j++)
+		{
+			if (i%j == 0)
+			{
+				break;//直接跳出for循环
+			}
+		}
+		if (j >sqrt( i))
+		{
+			count++;
+			printf("%d ", i);
+		}
+	}
+	printf("\ncount = %d\n", count);
+	return 0;
+}
+
+
+int main()//判断100到200之间有多少个素数
+{
+	int i = 0;
+	int count = 0;
+	//sqrt - 开平方的库函数
+	for (i = 101; i <= 200; i+=2)//100到l200之间，偶数不可能是素数
+	{
+		//判断i是否是素数
+		//素数的判断规则，只能被1和本身整除的数
+		//试除法
+		//产生i到i-1试着去除自己本身
+		int j = 0;
+		for (j = 2; j < sqrt(i); j++)
+		{
+			if (i%j == 0)
+			{
+				break;//直接跳出for循环
+			}
+		}
+		if (j >sqrt(i))
+		{
+			count++;
+			printf("%d ", i);
+		}
+	}
+	printf("\ncount = %d\n", count);
+	return 0;
+}
