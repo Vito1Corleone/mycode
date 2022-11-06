@@ -1,0 +1,44 @@
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+//int main()
+//{
+//	char input[20] = { 0 };
+//	//shutdown -s -t 60  系统延时60秒后关机
+//	//shutdown -a   系统取消关机
+//	system("shutdown -s -t 600");
+//again:
+//	printf("请注意，你的电脑将在十分钟后关机，如果输入：我是猪，将取消关机\n请输入>:");
+//	scanf_s("%s",input,sizeof(input));//高版本的vs  的scanf_s要在最后输入长度才能运行
+//	if (strcmp(input, "我是猪") == 0)//比较两个字符串的函数--strcump（），如果左边等于右边，返回0，左边大于右边返回正数，左边小于右边返回负数
+//	{
+//		system("shutdown -a");
+//	}
+//	else
+//	{
+//		goto again;
+//	}
+//	return 0;
+//}
+
+
+int main()
+{
+	char input[20] = { 0 };
+	//shutdown -s -t 60  系统延时60秒后关机
+	//shutdown -a   系统取消关机
+	system("shutdown -s -t 60");
+	while (1)
+	{
+		printf("请注意，你的电脑将在十分钟后关机，如果输入：我是猪，将取消关机\n请输入>:");
+		scanf_s("%s", input, sizeof(input));//高版本的vs  的scanf_s要在最后输入长度才能运行
+		if (strcmp(input, "我是猪") == 0)//比较两个字符串的函数--strcump（），如果左边等于右边，返回0，左边大于右边返回正数，左边小于右边返回负数
+		{
+			system("shutdown -a");
+			break;
+		}
+	}
+	return 0;
+}
