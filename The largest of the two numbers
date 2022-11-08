@@ -1,0 +1,46 @@
+
+#include<stdio.h>
+
+//int main()
+//{
+//	char arr[] = "hello world";
+//	memset(arr, '*', 5);
+//	printf("%s\n", arr);
+//	//设置char数组前五位，改变成***** world
+//	return 0;
+//}
+
+//int max(int x, int y)
+//{
+//	if (x > y)
+//	{
+//		return x;
+//	}
+//	else if (x<y)
+//	{
+//		return y;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//
+//}
+//
+int main()//找出两个数的较大值
+{
+	int x = 2;
+	int y = 5;
+	int sum = 0;
+	sum = max(x, y);
+	printf("%d\n", sum);
+	return 0;
+}
+int get_max(int x, int y)
+{
+	//if (x > y)
+	//	return x;
+	//else
+	//	return y;
+	return (x > y) ? (x) : (y);
+}
